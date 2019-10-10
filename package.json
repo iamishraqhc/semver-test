@@ -1,0 +1,93 @@
+{
+  "name": "7m-mos-gateway",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run prod",
+    "server": "babel-node ./src/bin/www",
+    "server:prod": "node ./dist/bin/www",
+    "dev": "cross-env NODE_ENV=dev npm-run-all server",
+    "prod": "cross-env NODE_ENV=prod npm-run-all clean build server:prod",
+    "lint": "eslint ./src",
+    "clean": "rimraf dist",
+    "zip": "bestzip mos.zip dist/",
+    "build": "babel --out-dir ./dist --copy-files ./src/",
+    "rebuild": "npm-run-all clean build",
+    "test": "mocha --require @babel/register  ./src/**/*.test.js  --exit",
+    "watch": "nodemon --exec babel-node ./src/bin/www",
+    "semver": "babel-node ./scripts/semver"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --ignore-path .gitignore .",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*",
+      "logs/*"
+    ],
+    "delay": "1000"
+  },
+  "dependencies": {
+    "app-root-path": "^2.2.1",
+    "babel-eslint": "^10.0.2",
+    "callsites": "^3.1.0",
+    "compression": "^1.7.4",
+    "convict": "^5.0.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "iconv-lite": "^0.5.0",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11",
+    "queue-fifo": "^0.2.6",
+    "semver": "^6.3.0",
+    "semver-cli": "^1.0.1",
+    "stack-trace": "0.0.10",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.10.0",
+    "ws": "^7.1.1",
+    "xml2js": "^0.4.19",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.4.4",
+    "acorn": "^6.2.1",
+    "bestzip": "^2.1.4",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.0.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.1",
+    "proxyquire": "^2.1.0",
+    "rimraf": "^2.6.3",
+    "semantic-versioning": "^1.0.2",
+    "sinon": "^7.3.2"
+  }
+}

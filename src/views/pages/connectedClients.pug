@@ -1,0 +1,20 @@
+extends ../layouts/main.pug
+
+block content
+ script.
+     interval="#{hearBeatInterval}"
+ script(type='text/javascript', src="javascripts/script.js")
+ div#tablewrap
+    table#desc
+      tr
+        th Client ID 
+        th IP Address
+        th Status
+        th Last Heartbeat Time
+      each client in clients
+        tr
+          td= client.id
+          td= client.ipAddress
+          td= client.status
+          td= client.lastHeartbeatTime
+

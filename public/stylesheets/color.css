@@ -1,0 +1,32 @@
+:root {
+  /* Background Colors */
+  --defaultBackground: #222a35;
+
+  /* Text colors */
+  --highEmphasis: #ffffff;
+  --mediumEmphasis: rgba(255, 255, 255, 0.54);
+  --disabled: rgba(255, 255, 255, 0.25);
+
+  /* Divider Colors */
+  --dividerLight: rgba(255, 255, 255, 0.15);
+  --dividerDark: rgba(0, 0, 0, 0.15);
+
+  /* Status Color */
+  --statusApproved: #4ece3d;
+  --statusWarning: #ff9800;
+  --statusError: #f2453d;
+  --onSelected: #3997ff;
+  --onHover: brightness(108%);
+  --onFocus: #3997ff;
+  --outlineButtonOnHover: rgba(255, 255, 255, 0.08);
+  --statusOnHover: rgba(255, 255, 255, 0.08);
+  --switchTrackInactive: rgba(141, 155, 174, 0.5);
+
+  /* Surface Colors */
+  --surfaceAppBackgroundMain: #516379;
+  --surfaceAppBackgroundNavLevel1: #202a36;
+  --surfaceCard: #516379;
+  --surfaceDialogs: #323e4d;
+  --blackHoverOverlay: rgba(0, 0, 0, 0.08);
+  --blackMediumEmphasis: rgba(0, 0, 0, 0.7);
+}

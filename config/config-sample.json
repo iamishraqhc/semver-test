@@ -1,0 +1,29 @@
+{
+  "env": "prod",
+  "log": {
+    "morganFormat": "short",
+    "console": "true",
+    "fileLevel": "info",
+    "consoleLevel": "info"
+  },
+  "http": {
+    "port": 5000,
+    "enableHTTPS": true
+  },
+  "mos": {
+    "ncsID": "NCSSERVER",
+    "lowerPort": 10540,
+    "heartbeatInterval": 60,
+    "messageIdFilename": "./messageId.data",
+    "encoding": "utf16-be"
+  },
+  "dina": {
+    "webSocketEndPoint": "WEB Socket Endpoint",
+    "pingInterval": 300,
+    "reconnectInterval": 300,
+    "rundown": {
+      "duration": 1,
+      "sartDate": "2019-02-15"
+    }
+  }
+}

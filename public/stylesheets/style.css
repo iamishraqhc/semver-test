@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('./color.css');
+@import url('./typography.css');
+
+* {
+  margin: 0;
+  /* padding: 0; */
+}
+body {
+  background: var(--defaultBackground);
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+#reveal {
+  /* overflow: hidden; */
+  background-color: var(--surfaceAppBackgroundNavLevel1);
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#reveal a {
+  /* float: left; */
+  border-radius: 4px;
+  color: var(--mediumEmphasis);
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#reveal a:hover {
+  background-color: var(--onFocus);
+  color: var(--highEmphasis);
+}
+
+#maindiv {
+  position: relative;
+  border-bottom: 1px solid var(--onFocus);
+}
+
+#mostitle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+#reveal a:active {
+  background-color: #4caf50;
+  color: white;
+}
+
+#tablewrap {
+  display: flex;
+  margin-top: 40px;
+}
+
+#desc {
+  margin: auto;
+  color: var(--mediumEmphasis);
+  width: 50%;
+  border-collapse: collapse;
+  justify-content: center;
+}
+
+th {
+  text-align: center;
+  padding: 1em;
+  border: 1px solid var(--mediumEmphasis);
+}
+
+td {
+  border: 1px solid var(--mediumEmphasis);
+  padding: 1em;
+  text-align: center;
+}

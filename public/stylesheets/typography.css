@@ -1,0 +1,53 @@
+@import url('./color.css');
+
+h1 {
+  color: var(--highEmphasis);
+  font-size: 96px;
+  letter-spacing: -1.5;
+  line-height: 114px;
+  font-weight: 300;
+}
+
+h2 {
+  color: var(--highEmphasis);
+  font-size: 60px;
+  letter-spacing: -0.5;
+  line-height: 90px;
+  font-weight: 300;
+}
+h3 {
+  color: var(--highEmphasis);
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 72px;
+  font-weight: 400;
+}
+h4 {
+  color: var(--highEmphasis);
+  font-size: 34px;
+  letter-spacing: 0.25;
+  line-height: 51px;
+  font-weight: 400;
+}
+h5 {
+  color: var(--highEmphasis);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 36px;
+  font-weight: 400;
+}
+h6 {
+  color: var(--highEmphasis);
+  font-size: 20px;
+  letter-spacing: 0.25;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+#headertitle {
+  color: var(--disabled);
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 36px;
+  font-weight: 400;
+}
