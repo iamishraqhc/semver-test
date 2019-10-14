@@ -3,7 +3,7 @@ import moduleLogger from '../src/config/utils/moduleLogger';
 
 const logger = moduleLogger('script');
 
-const { exec } = require('child_process');
+const { exec } = require('child_process').execSync;
 const { performance } = require('perf_hooks');
 
 function shellcmd(cmd) {
