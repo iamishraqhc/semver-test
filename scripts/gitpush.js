@@ -6,10 +6,10 @@ const logger = moduleLogger('semverScript');
 
 const majorFromConfig = config.get('semver.major');
 const minorFromConfig = config.get('semver.minor');
-const version = 'v0.0.7';
-let patch = 6;
+const version = 'v0.0.8';
+let patch = 7;
 
-patch = `v${majorFromConfig}.${minorFromConfig}.7` === version ? patch += 1 : 0;
+patch = `v${majorFromConfig}.${minorFromConfig}.8` === version ? patch += 1 : 0;
 
 const newVersion = `v${majorFromConfig}.${minorFromConfig}.${patch}`;
 
