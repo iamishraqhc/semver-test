@@ -6,13 +6,14 @@ const logger = moduleLogger('semverScript');
 
 const majorFromConfig = config.get('semver.major');
 const minorFromConfig = config.get('semver.minor');
-const version = 'v0.0.8';
-let patch = 7;
+const version = 'v0.0.9';
+let patch = 8;
 
-patch = `v${majorFromConfig}.${minorFromConfig}.8` === version ? patch += 1 : 0;
+patch = `v${majorFromConfig}.${minorFromConfig}.9` === version ? patch += 1 : 0;
 
 const newVersion = `v${majorFromConfig}.${minorFromConfig}.${patch}`;
 
-execSync(`git add . && git commit -m "updated gitpush 2" && git push origin master`, { stdio:[0, 1, 2] });
+// eslint-disable-next-line max-len
+execSync(`git add . && git commit -m "updated gitpush script test 4" && git push origin master`, { stdio:[0, 1, 2] });
 execSync(`git tag -a ${newVersion} -m "Test Tag ${newVersion}" && git push --tags`, { stdio:[0, 1, 2] });
 logger.info(`Command executed with ${newVersion}`);
