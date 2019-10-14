@@ -1,4 +1,4 @@
-const {execSync} = require('child_process').execSync;
+import { execSync } from 'child_process';
 
-const mssg = `BUILD - ${process.argv[2]}`;
-execSync(`git push origin master  ${mssg}`, { stdio:[0, 1, 2] });
+// const mssg = `BUILD - ${process.argv[2]}`;
+execSync(`git push origin master`, { stdio:[0, 1, 2] });
