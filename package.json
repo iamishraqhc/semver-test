@@ -15,7 +15,8 @@
     "rebuild": "npm-run-all clean build",
     "test": "mocha --require @babel/register  ./src/**/*.test.js  --exit",
     "watch": "nodemon --exec babel-node ./src/bin/www",
-    "semver": "babel-node ./scripts/semver"
+    "semver": "babel-node ./scripts/semver",
+    "gitpush": "babel-node ./scripts/gitpush"
   },
   "lint-staged": {
     "**/*.js": [
