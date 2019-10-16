@@ -26,7 +26,7 @@ const config = convict({
     minor: {
       doc: 'The middle number of a version "major.minor.patch"',
       format: String,
-      default: 0,
+      default: 1,
     },
   },
   log: {
