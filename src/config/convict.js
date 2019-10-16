@@ -21,12 +21,12 @@ const config = convict({
     major: {
       doc: 'The leftmost number of a version "major.minor.patch"',
       format: String,
-      default: 0,
+      default: 1,
     },
     minor: {
       doc: 'The middle number of a version "major.minor.patch"',
       format: String,
-      default: 1,
+      default: 0,
     },
   },
   log: {
