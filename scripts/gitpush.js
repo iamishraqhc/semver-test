@@ -17,7 +17,9 @@ const newVersion = `${majorFromConfig}.${minorFromConfig}.${patch}`;
 
 // eslint-disable-next-line max-len
 execSync(`git add . && git commit -m "updated gitpush script test version v${newVersion}" && git push origin master`, { stdio:[0, 1, 2] });
-execSync(`git tag -a v${newVersion} -m "Test Tag v${newVersion}" && git push --tags`, { stdio:[0, 1, 2] });
-execSync(`npm publish`, { stdio:[0,1,2] });
+// execSync(`git tag -a v${newVersion} -m "Test Tag v${newVersion}" && git push --tags`, { stdio:[0, 1, 2] });
+
+// eslint-disable-next-line max-len
+execSync(`npm version ${newVersion} && git tag -a v${newVersion} -m "Test Tag v${newVersion}" && git push --tags`, { stdio:[0,1,2] });
 logger.info(`Command executed with v${newVersion}`);
 logger.info(`The tag version from github is ${gitVersion()}`);
