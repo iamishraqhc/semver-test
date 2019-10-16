@@ -1,3 +1,4 @@
+import gitVersion from 'git-tag-version';
 import config from '../src/config/convict';
 import execute from './shellcmd';
 import moduleLogger from '../src/config/utils/moduleLogger';
@@ -17,3 +18,4 @@ const newVersion = `v${majorFromConfig}.${minorFromConfig}.${patch}`;
 execute(`git push origin master`);
 
 logger.info(`Command executed with ${newVersion}`);
+logger.info(gitVersion());
