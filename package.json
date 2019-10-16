@@ -1,7 +1,7 @@
 {
   "name": "7m-mos-gateway",
   "version": "0.0.12",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "npm run prod",
     "server": "babel-node ./src/bin/www",
