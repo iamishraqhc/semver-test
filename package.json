@@ -1,6 +1,6 @@
 {
   "name": "7m-mos-gateway",
-  "version": "0.0.161",
+  "version": "0.0.162",
   "private": true,
   "scripts": {
     "start": "npm run prod",
