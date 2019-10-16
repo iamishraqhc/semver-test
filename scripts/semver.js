@@ -20,4 +20,4 @@ execute(`git push origin master`);
 
 logger.info(`Command executed with ${newVersion}`);
 logger.info(gitVersion());
-logger.info(packageJson.version);
+logger.info(packageJson.version.split('.')[1]);

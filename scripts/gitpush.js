@@ -9,7 +9,7 @@ const logger = moduleLogger('semverScript');
 const majorFromConfig = config.get('semver.major');
 const minorFromConfig = config.get('semver.minor');
 const version = `v${packageJson.version}`;
-let patch = 15;
+let patch = packageJson.version.split('.')[2];
 
 patch = `v${majorFromConfig}.${minorFromConfig}.${patch}` === version ? patch += 1 : 0;
 
