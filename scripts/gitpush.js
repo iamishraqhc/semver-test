@@ -9,7 +9,7 @@ const logger = moduleLogger('semverScript');
 const majorFromConfig = config.get('semver.major');
 const minorFromConfig = config.get('semver.minor');
 const version = `v${packageJson.version}`;
-let patch = 13;
+let patch = 14;
 
 patch = `v${majorFromConfig}.${minorFromConfig}.${patch}` === version ? patch += 1 : 0;
 
@@ -20,6 +20,6 @@ execSync(`git add . && git commit -m "updated gitpush script test version v${new
 // execSync(`git tag -a v${newVersion} -m "Test Tag v${newVersion}" && git push --tags`, { stdio:[0, 1, 2] });
 
 // eslint-disable-next-line max-len
-execSync(`npm version ${newVersion} && git tag -a v${newVersion} -m "Test Tag v${newVersion}" && git push --tags`, { stdio:[0,1,2] });
+execSync(`npm version ${newVersion} && git push --tags`, { stdio:[0,1,2] });
 logger.info(`Command executed with v${newVersion}`);
 logger.info(`The tag version from github is ${gitVersion()}`);
