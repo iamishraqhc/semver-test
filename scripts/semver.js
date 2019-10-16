@@ -19,3 +19,5 @@ execute(`git push origin master`);
 
 logger.info(`Command executed with ${newVersion}`);
 logger.info(gitVersion());
+const gitMaster = (JSON.stringify(gitVersion())).substr(1,6);
+logger.info(gitMaster);
