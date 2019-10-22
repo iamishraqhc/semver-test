@@ -1,5 +1,4 @@
 import { execSync } from 'child_process';
-import gitVersion from "git-tag-version";
 import packageJson from '../package.json';
 import config from '../src/config/convict';
 import moduleLogger from '../src/config/utils/moduleLogger';
@@ -22,4 +21,3 @@ execSync(`git add . && git commit -m "updated gitpush script test version v${new
 // eslint-disable-next-line max-len
 execSync(`npm version ${newVersion} && git push --tags`, { stdio:[0,1,2] });
 logger.info(`Command executed with v${newVersion}`);
-logger.info(`The tag version from github is ${gitVersion()}`);
